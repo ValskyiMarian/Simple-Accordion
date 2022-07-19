@@ -1,0 +1,95 @@
+	/* GOOGLE FONTS */
+	@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;800&display=swap");
+
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: 'Roboto', sans-serif;
+	}
+
+	.container {
+		max-width: 550px;
+		padding: 100px 20px;
+		margin: 0 auto;
+	}
+
+	.accordion {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		box-shadow: 0px 5px 5px #566573;
+		padding: 30px;
+		border-top: 15px solid #0E6655;
+	}
+
+	.accordion__item {
+		margin: 0px 0px 30px 0px;
+	}
+
+	.accordion__title {
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		position: relative;
+		cursor: pointer;
+		color: #0E6655;
+		font-weight: 800;
+	}
+
+	.accordion__title:before,
+	.accordion__title:after {
+		content: '';
+		width: 15px;
+		height: 4px;
+		background-color: #0E6655;
+		position: absolute;
+		top: 5px;
+		transition: all 0.4s ease 0s;
+	}
+
+	.accordion__title:before {
+		transform: rotate(0deg);
+		right: 0px;
+	}
+
+	.accordion__title:after {
+		transform: rotate(90deg);
+		right: 0px;
+	}
+
+	.accordion__title.active:before,
+	.accordion__title.active:after {
+		background-color: #E74C3C;
+	}
+
+	.accordion__title.active {
+		color: #E74C3C;
+		font-weight: 800;
+	}
+
+	.accordion__title.active:before {
+		transform: rotate(-40deg);
+	}
+
+	.accordion__title.active:after {
+		transform: rotate(40deg);
+	}
+
+	.accordion__text {
+		display: none;
+		margin: 30px 0px;
+		padding: 10px 0px 10px 0px;
+		text-align: justify;
+		letter-spacing: 1px;
+		line-height: 25px;
+		border-bottom: 1px solid #D6DBDF;
+		border-top: 1px solid #D6DBDF;
+	}
+
+	.title p {
+		text-align: center;
+		font-size: 30px;
+		padding-bottom: 40px;
+		font-weight: 800;
+		color: #0E6655;
+	}
